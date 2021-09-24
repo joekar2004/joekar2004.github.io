@@ -4,7 +4,7 @@ function encode() {
     if (isNaN(shift)) {
         document.getElementById("output").innerHTML = "Please enter a number into the shift value";
     } else {
-        if (document.getElementById("encode").value == "encode") {
+        if (document.getElementById("encode").selectedIndex == 0) {
             document.getElementById("output").innerHTML = caesar(txt, shift);
         } else {
             document.getElementById("output").innerHTML = caesar(txt, 26-shift);
