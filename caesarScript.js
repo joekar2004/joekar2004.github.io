@@ -1,10 +1,14 @@
 function encode() {
-    var decoded = document.getElementById("cleartext").value;
+    var txt = document.getElementById("cleartext").value;
     var shift = parseInt(document.getElementById("shift").value);
     if (isNaN(shift)) {
         document.getElementById("output").innerHTML = "Please enter a number into the shift value";
     } else {
-    document.getElementById("output").innerHTML = caesar(decoded, shift);
+        if (document.getElementById("encode").value = "encode") {
+            document.getElementById("output").innerHTML = caesar(txt, shift);
+        } else {
+            document.getElementById("output").innerHTML = caesar(txt, 26-shift);
+        }
     }
 }
 
