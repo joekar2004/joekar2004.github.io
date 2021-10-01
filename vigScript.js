@@ -1,7 +1,7 @@
 function encode() {
     var txt = document.getElementById("cleartext").value;
     var shift2 = document.getElementById("shift").value;
-    var shift = {}
+    var shift = new Array(shift2.length) 
     for (var i = 0; i < shift.length; i++) {
         shift[i] = shift2[i];
     }
