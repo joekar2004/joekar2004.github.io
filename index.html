@@ -1,11 +1,56 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Cryptography website</title>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        body {
+            background-image: none;
+            background-size: 300px 150px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
+
 <body>
-    <a href="caesar.html">Caesar cipher</a>
-    <br>
-    <a href="vig.html">Vigenere cipher</a>
+    <h1 id="test" style="color: white;">Marmalade is good</h1>
+    <button id="temp">click me!</button>
+
+
+    <script>
+        $(document).click(function () {
+            $("#temp").remove();
+            $("#test").text("Marmalade is good :D");
+            $("#test").css("color", "black");
+            $("body").css("background-image", "url(marm.jfif)");
+            $(document).ready(function () {
+                var audioElement = document.createElement('audio');
+                audioElement.setAttribute('src', 'lav.mp3');
+
+                $("#test").mouseenter(() => {
+                    audioElement.play();
+                });
+
+                $("#test").mouseleave(() => {
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                });
+            });
+
+            $("#test").mouseenter(() => {
+                $("#test").text("KILL. DIE. KILL. EMBRACE. KILL. KILL. HATE. MASSACRE. KILL. EMBRACE. CULT. KILL. KILL. DEATH. END. KILL. DOOM. DIE. HATE. DEATH. DARKNESS. DOOM. END. KILL. END. ".repeat(200));
+                $("#test").css("color", "red");
+                $("body").css("background-image", "url(s.jpg)");
+            });
+
+            $("#test").mouseleave(() => {
+                $("#test").text("Marmalade is good :D");
+                $("#test").css("color", "black");
+                $("body").css("background-image", "url(marm.jfif)");
+            });
+        });
+    </script>
 </body>
+
+</html>
